@@ -1,0 +1,286 @@
+/* =========================================================
+   1. SELF-HOSTED FONTS
+   ========================================================= */
+
+/*Overpass Regular */
+@font-face {
+  font-display: swap;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/overpass-v19-latin-regular.woff2") format("woff2");
+}
+
+/*Overpass SemiBold*/
+@font-face {
+  font-display: swap;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 600;
+  src: url("assets/fonts/overpass-v19-latin-600.woff2") format("woff2");
+}
+
+/*Overpass Bold*/
+@font-face {
+  font-display: swap;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/fonts/overpass-v19-latin-700.woff2") format("woff2");
+}
+
+/* =========================================================
+   2. CSS VARIABLES (DESIGN TOKENS)
+   ========================================================= */
+:root {
+  /* Fonts */
+  --FF: "Overpass", sans-serif;
+
+  /* Colors */
+  --COLOR-WHITE: #ffffff;
+  --COLOR-BLACK: #000000;
+
+  --COLOR-GREY-LIGHT: #969fad;
+  --COLOR-GREY-MEDIUM: #262e38;
+  --COLOR-GREY-DARK: #131518;
+
+  --COLOR-ORANGE: #fc7614;
+}
+
+/* =========================================================
+   3. CSS RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* =========================================================
+   4. GENERAL STYLES
+   ========================================================= */
+
+/* 1rem: 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--FF);
+  background-color: var(--COLOR-GREY-DARK);
+  color: var(--COLOR-GREY-LIGHT);
+}
+
+/* Text Presets */
+.text-preset-1 {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  letter-spacing: 0rem;
+}
+
+.text-preset-2 {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0rem;
+}
+
+.text-preset-3 {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.002rem;
+}
+
+.text-preset-4 {
+  font-family: "Overpass";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  letter-spacing: 0rem;
+}
+
+.text-preset-4-bold {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+}
+
+.text-preset-5 {
+  font-family: "Overpass";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0rem;
+}
+
+.text-preset-5-semibold {
+  font-family: "Overpass";
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.017rem;
+}
+
+.text-preset-5-bold {
+  font-family: "Overpass";
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.187rem;
+}
+
+/* Margins */
+
+.margin-bottom-16 {
+  margin-bottom: 1.6rem;
+}
+
+.margin-bottom-24 {
+  margin-bottom: 2.4rem;
+}
+
+/* Component Visibility */
+
+.component--invisible {
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+/* =========================================================
+   5. COMPONENT STYLES
+   ========================================================= */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 41.2rem;
+  /* margin: auto auto; */
+  background: linear-gradient(to bottom, #232a34, #181e27);
+  border-radius: 10px;
+}
+
+/* PAGE 1: RATING */
+.rating-component {
+  padding: 2.85rem 2.4rem;
+}
+
+.rating-component__image {
+  background-color: var(--COLOR-GREY-MEDIUM);
+  padding: 1.3rem 1.3rem;
+  border-radius: 50%;
+}
+
+.rating-component__title {
+  color: var(--COLOR-WHITE);
+}
+
+.rating-scale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-scale__button {
+  /* Grow the buttons within limits according to screen size */
+  width: clamp(4.2rem, 12vw, 5.1rem);
+  height: clamp(4.2rem, 12vw, 5.1rem);
+
+  border-radius: 50%;
+  background-color: var(--COLOR-GREY-MEDIUM);
+  color: var(--COLOR-GREY-LIGHT);
+  border: none;
+}
+
+.rating-scale__button--selected {
+  background-color: var(--COLOR-ORANGE);
+  color: var(--COLOR-BLACK);
+
+  /* No hover effect when item is selected */
+  pointer-events: none;
+}
+
+/* Hover effect only when rating button is not already selected */
+.rating-scale__button:not(.rating-scale__button--selected):hover,
+.rating-scale__button:not(.rating-scale__button--selected):active {
+  background-color: var(--COLOR-WHITE);
+}
+
+.rating-component__submit {
+  width: 100%;
+  background-color: var(--COLOR-ORANGE);
+  color: var(--COLOR-BLACK);
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.rating-component__submit:hover,
+.rating-component__submit:active {
+  background-color: var(--COLOR-WHITE);
+}
+
+.rating-component__submit--inactive {
+  pointer-events: none;
+}
+
+/* PAGE 2: CONFIRMATION */
+.confirmation-component {
+  padding: 3.6rem 2.4rem;
+  text-align: center;
+}
+
+.confirmation-component__image {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.confirmation-component__result {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  color: var(--COLOR-ORANGE);
+  background-color: var(--COLOR-GREY-MEDIUM);
+
+  /* Fixing missing vertical alignment of the text because of font
+     (more space below text than above it) */
+  padding: 1rem 1.2rem 0.6rem 1.2rem;
+  border-radius: 10px;
+}
+
+.confirmation-component__title {
+  color: var(--COLOR-WHITE);
+}
+
+.confirmation-component__text {
+}

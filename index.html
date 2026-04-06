@@ -27,26 +27,33 @@
     </style>
   </head>
   <body>
-    <!-- Rating state start -->
+    <main>
+    <div class="container">
+      <div class="rating-component">
+        <img src="assets/images/icon-star.svg" class="rating-component__image margin-bottom-24" alt="star"/>
 
-    How did we do? Please let us know how we did with your support request. All
-    feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit
+        <h1 class="rating-component__title text-preset-2 margin-bottom-16">How did we do?</h1>
 
-    <!-- Rating state end -->
+        <p class="rating-component__text text-preset-5 margin-bottom-16">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
 
-    <!-- Thank you state start -->
+        <div class="rating-scale margin-bottom-24">
+          <button class="rating-scale__button">1</button>
+          <button class="rating-scale__button">2</button>
+          <button class="rating-scale__button">3</button>
+          <button class="rating-scale__button">4</button>
+          <button class="rating-scale__button">5</button>
+        </div>
+        <button class="rating-component__submit rating-component__submit--inactive text-preset-5-bold">Submit</button>
+      </div>
 
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch!
-
-    <!-- Thank you state end -->
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      <section class="confirmation-component component--invisible">
+        <img src="assets/images/illustration-thank-you.svg" class="confirmation-component__image margin-bottom-24"/>
+        <span class="confirmation-component__result text-preset-5 margin-bottom-24"></span>
+        <h1 class="confirmation-component__title text-preset-2 margin-bottom-16">Thank you!</h1>
+        <p class="confirmation-component__text text-preset-5">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+      </section>
+    </div>
+    </main>
     </footer>
 
     <script src="script.js"></script>
