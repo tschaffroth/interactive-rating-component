@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/tschaffroth/interactive-rating-component.git)
-- Live Site URL: [Netlify](https://interactive-rating-component.netlify.app/)
+- Live Site URL: [Netlify](https://interactive-rating-component-tsfm.netlify.app/)
 
 ## My process
 
