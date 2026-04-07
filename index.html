@@ -36,22 +36,45 @@
 
         <p class="rating-component__text text-preset-5 margin-bottom-16">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
 
-        <div class="rating-scale margin-bottom-24">
-          <button class="rating-scale__button">1</button>
-          <button class="rating-scale__button">2</button>
-          <button class="rating-scale__button">3</button>
-          <button class="rating-scale__button">4</button>
-          <button class="rating-scale__button">5</button>
-        </div>
-        <button class="rating-component__submit rating-component__submit--inactive text-preset-5-bold">Submit</button>
+        <form class="rating-scale">
+          <fieldset class="rating-scale__fieldset margin-bottom-24">
+            <label class="rating-scale__label text-preset-5-bold">
+              <input type="radio" class="rating-scale__input" name="rating" value="1">
+              1
+            </label>
+
+            <label class="rating-scale__label text-preset-5-bold">
+              <input type="radio" class="rating-scale__input"  name="rating" value="2">
+              2
+            </label>
+
+            <label class="rating-scale__label text-preset-5-bold">
+              <input type="radio" class="rating-scale__input"  name="rating" value="3">
+              3
+            </label>
+
+            <label class="rating-scale__label text-preset-5-bold">
+              <input type="radio" class="rating-scale__input"  name="rating" value="4">
+              4
+            </label>
+
+            <label class="rating-scale__label text-preset-5-bold">
+              <input type="radio" class="rating-scale__input"  name="rating" value="5">
+              5
+            </label>
+          </fieldset>
+
+          <button type="button" class="rating-component__submit rating-component__submit--inactive text-preset-5-bold">Submit</button>
+       </form>
+      
       </div>
 
-      <section class="confirmation-component component--invisible">
-        <img src="assets/images/illustration-thank-you.svg" class="confirmation-component__image margin-bottom-24"/>
+      <div class="confirmation-component component--invisible">
+        <img src="assets/images/illustration-thank-you.svg" class="confirmation-component__image margin-bottom-24" alt="smartphone"/>
         <span class="confirmation-component__result text-preset-5 margin-bottom-24"></span>
-        <h1 class="confirmation-component__title text-preset-2 margin-bottom-16">Thank you!</h1>
+        <h2 class="confirmation-component__title text-preset-2 margin-bottom-16">Thank you!</h2>
         <p class="confirmation-component__text text-preset-5">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
-      </section>
+      </div>
     </div>
     </main>
     </footer>

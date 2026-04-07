@@ -86,7 +86,7 @@ body {
 
 /* Text Presets */
 .text-preset-1 {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 2.8rem;
   line-height: 3.5rem;
@@ -94,7 +94,7 @@ body {
 }
 
 .text-preset-2 {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3rem;
@@ -102,7 +102,7 @@ body {
 }
 
 .text-preset-3 {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -110,7 +110,7 @@ body {
 }
 
 .text-preset-4 {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.4rem;
@@ -118,7 +118,7 @@ body {
 }
 
 .text-preset-4-bold {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.9rem;
@@ -126,7 +126,7 @@ body {
 }
 
 .text-preset-5 {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.2rem;
@@ -134,7 +134,7 @@ body {
 }
 
 .text-preset-5-semibold {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 2.4rem;
@@ -142,7 +142,7 @@ body {
 }
 
 .text-preset-5-bold {
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.8rem;
@@ -162,8 +162,6 @@ body {
 /* Component Visibility */
 
 .component--invisible {
-  visibility: hidden;
-  pointer-events: none;
   display: none;
 }
 
@@ -202,34 +200,42 @@ main {
 }
 
 .rating-scale {
+  border: none;
+}
+
+.rating-scale__fieldset {
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.rating-scale__button {
-  /* Grow the buttons within limits according to screen size */
+.rating-scale__label {
   width: clamp(4.2rem, 12vw, 5.1rem);
   height: clamp(4.2rem, 12vw, 5.1rem);
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
+
   background-color: var(--COLOR-GREY-MEDIUM);
   color: var(--COLOR-GREY-LIGHT);
-  border: none;
 }
 
-.rating-scale__button--selected {
+.rating-scale__label--selected {
   background-color: var(--COLOR-ORANGE);
   color: var(--COLOR-BLACK);
-
-  /* No hover effect when item is selected */
-  pointer-events: none;
 }
 
-/* Hover effect only when rating button is not already selected */
-.rating-scale__button:not(.rating-scale__button--selected):hover,
-.rating-scale__button:not(.rating-scale__button--selected):active {
+.rating-scale__label:not(.rating-scale__label--selected):hover,
+.rating-scale__label:not(.rating-scale__label--selected):active {
   background-color: var(--COLOR-WHITE);
+}
+
+.rating-scale__input {
+  display: none;
 }
 
 .rating-component__submit {
@@ -246,6 +252,7 @@ main {
 .rating-component__submit:hover,
 .rating-component__submit:active {
   background-color: var(--COLOR-WHITE);
+  cursor: pointer;
 }
 
 .rating-component__submit--inactive {
@@ -267,8 +274,6 @@ main {
 
 .confirmation-component__result {
   display: inline-block;
-  align-items: center;
-  justify-content: center;
   color: var(--COLOR-ORANGE);
   background-color: var(--COLOR-GREY-MEDIUM);
 
