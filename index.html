@@ -29,7 +29,7 @@
   <body>
     <main>
     <div class="container">
-      <div class="rating-component">
+      <section class="rating-component">
         <img src="assets/images/icon-star.svg" class="rating-component__image margin-bottom-24" alt="star"/>
 
         <h1 class="rating-component__title text-preset-2 margin-bottom-16">How did we do?</h1>
@@ -38,6 +38,7 @@
 
         <form class="rating-scale">
           <fieldset class="rating-scale__fieldset margin-bottom-24">
+            <legend></legend>
             <label class="rating-scale__label text-preset-5-bold">
               <input type="radio" class="rating-scale__input" name="rating" value="1">
               1
@@ -67,14 +68,14 @@
           <button type="button" class="rating-component__submit rating-component__submit--inactive text-preset-5-bold">Submit</button>
        </form>
       
-      </div>
+      </section>
 
-      <div class="confirmation-component component--invisible">
+      <section class="confirmation-component component--invisible">
         <img src="assets/images/illustration-thank-you.svg" class="confirmation-component__image margin-bottom-24" alt="smartphone"/>
-        <span class="confirmation-component__result text-preset-5 margin-bottom-24"></span>
+        <p class="confirmation-component__result text-preset-5 margin-bottom-24"></p>
         <h2 class="confirmation-component__title text-preset-2 margin-bottom-16">Thank you!</h2>
         <p class="confirmation-component__text text-preset-5">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
-      </div>
+      </section>
     </div>
     </main>
     </footer>
